@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <math.h>
+
+#include "token.h"
 #include "queue.h"
 #include "stack.h"
 
@@ -19,16 +21,7 @@ void print_queue(FILE* f, Queue* q);
  * Function to be written by students
  */
 void computeExpressions(FILE* input) {
-    char* line = NULL;
-    size_t len = 0;
-
-    while (getline(&line, &len, input) != -1) {
-        
-        printf("Input : %s", line);
-    }
-
-    
-    free(line);
+	(void)input;
 }
 
 /** Main function for testing.
@@ -67,4 +60,3 @@ void print_queue(FILE* f, Queue* q) {
 	fprintf(f, "(%d) --  ", queue_size(q));
 	queue_map(q, print_token, f);
 }
-
